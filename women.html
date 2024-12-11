@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfumuri Femei | Perfume Paradise</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Bara de navigare -->
+    <header class="header">
+        <button id="theme-toggle">Schimbă Tema</button>
+        <div class="site-name">
+            <h1>Perfume Paradise</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Căutare...">
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Acasă</a></li>        
+            <!-- Meniu dropdown pentru parfumuri bărbați și femei -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Parfumuri</a>
+                <div class="dropdown-content">
+                    <a href="men.html">Parfumuri Bărbați</a>
+                    <a href="women.html">Parfumuri Femei</a>
+                </div>
+            </li>           
+             <li><a href="Bestseller.html">Best Sellers</a></li>
+             <li><a href="note.html">Note</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="Ajutor.html">Ajutor</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conținutul paginii pentru parfumuri femei -->
+    <section class="products">
+        <h4>Parfumuri pentru Femei</h4>
+        <div class="product-grid">
+            <!-- Carduri pentru parfumuri femei -->
+            <div class="product-card" alt="ARMANI">
+                <img src="imagini/myway.jpg" >
+                <h3>ARMANI</h3>
+                <p>MyWay</p>
+                <p class="price">550 RON</p>
+            </div>
+            <!-- Produs 2 -->
+            <div class="product-card">
+                <img src="imagini/SI.jpg" alt="ARMANI">
+                <h3>ARMANI</h3>
+                <p>SI</p>
+                <p class="price">400 RON</p>
+            </div>
+            <!-- Produs 3 -->
+            <div class="product-card">
+                <img src="imagini/jadore.jpg" alt="DIOR">
+                <h3>DIOR</h3>
+                <p>J'adore</p>
+                <p class="price">630 RON</p>
+            </div>
+
+            <div class="product-card">
+                <img src="imagini/dg.jpg" alt="DOLCE&GABBANA">
+                <h3>DOLCE&GABBANA</h3>
+                <p>The only one</p>
+                <p class="price">330 RON</p>
+            </div>
+
+            <div class="product-card">
+                <img src="imagini/goodGIRL.jpg" alt="Dolce&Gabbana">
+                <h3>CAROLINA HERRERA</h3>
+                <p>Good girl</p>
+                <p class="price">450 RON</p>
+            </div>
+            <div class="product-card">
+                <img src="imagini/BURBERRY.jpg">
+                <h3>BURBERRY</h3>
+                <p>Her</p>
+                <p class="price">400 RON</p>
+            </div>
+            <div class="product-card">
+                <img src="imagini/paradox.jpg">
+                <h3>PRADA</h3>
+                <p>Pardox</p>
+                <p class="price">329 RON</p>
+            </div>
+            <div class="product-card">
+                <img src="imagini/cn.jpg" ">
+                <h3>VERSACE</h3>
+                <p>Crystal Noir</p>
+                <p class="price">290 RON</p>
+            </div>
+            <div class="product-card">
+                <img src="imagini/valentino.jpg" >
+                <h3>VALENTINO</h3>
+                <p>Donna born in Roma</p>
+                <p class="price">560 RON</p>
+            </div>
+            <div class="product-card">
+                <img src="imagini/tomford.jpg">
+                <h3>TOM FORD</h3>
+                <p>Tobacco Vanille</p>
+                <p class="price">800 RON</p>
+            </div>
+            <div class="product-card">
+                <img src="imagini/jpg.jpg">
+                <h3>JPG</h3>
+                <p>La belle</p>
+                <p class="price">545 RON</p>
+            </div>
+
+            <div class="product-card">
+                <img src="imagini/joy.jpg">
+                <h3>DIOR</h3>
+                <p>Joy</p>
+                <p class="price">630 RON</p>
+            </div>
+
+            <div class="product-card">
+                <img src="imagini/miis.jpg">
+                <h3>DIOR</h3>
+                <p>Miss Dior</p>
+                <p class="price">415 RON</p>
+            </div>
+
+            <div class="product-card">
+                <img src="imagini/libre.jpg">
+                <h3>YVES SAINT LAURENT</h3>
+                <p>Libre</p>
+                <p class="price">489 RON</p>
+            </div>
+
+            <div class="product-card">
+                <img src="imagini/LINT.jpg">
+                <h3>GIVENCHY</h3>
+                <p>L'Interdit</p>
+                <p class="price">515 RON</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+            
+<script>
+    // Selectăm butonul și adăugăm un event listener
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Funcție pentru a comuta între teme
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+
+        // Salvăm tema în localStorage
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
+
+    // Setăm tema inițială bazată pe localStorage
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.classList.add(savedTheme + '-mode');
+
+
+    // Selectăm câmpul de căutare și produsele
+// Selectăm câmpul de căutare și produsele
+const searchInput = document.getElementById('search-input');
+const productCards = document.querySelectorAll('.product-card');
+
+// Adăugăm event listener pentru tasta Enter
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        productCards.forEach(card => {
+            // Selectăm textul relevant (brand + numele produsului)
+            const productText = card.innerText.toLowerCase();
+
+            // Afișăm cardurile care conțin termenul de căutare
+            if (productText.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+});
+
+
+</script>

@@ -1,0 +1,224 @@
+/* Resetare stiluri pentru margini și padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stilizare pentru header (numele site-ului și căutarea) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-left: 520px;
+    background-color: #ffffff;
+    color: rgb(224, 141, 183);
+}
+
+/* Stil pentru titlu */
+.site-name h1 {
+    font-family: 'Raleway', serif;
+    font-size: 40px;  /* Mărimea fontului */
+    font-weight: 350;  /* Greutatea fontului */
+}
+
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    background-color: #f0f0f0; /* Culoare gri pentru fundalul input-ului */
+    color: #333; /* Culoare text (pentru căutare) */
+}
+
+.search-bar input::placeholder {
+    color: #888; /* Culoare gri pentru textul "Căutare" */
+}
+
+
+
+/* Bara de navigare */
+.navbar {
+    font-family: 'Raleway', serif; 
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 50px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block; /* Folosim inline-block pentru mai mult control */
+    margin: 0 80px; /* Mărim distanțele dintre elemente */
+}
+
+.navbar ul li a {
+    color: rgb(25, 22, 22);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 250;  /* Greutatea fontului */
+}
+
+.navbar ul li a:hover {
+    color: #0a0a0a;
+    position: relative;
+}
+
+/* Stil pentru secțiunea de imagine */
+.hero {
+    margin-top: 30px; /* Spațiu între navbar și imagine */
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 59vh;
+    object-fit: cover;}
+
+/* Stiluri pentru meniu dropdown */
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .dropbtn {
+    font-size: 17px;
+    font-weight: 250;
+    color: rgb(25, 22, 22);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar .dropbtn:hover {
+    color: #0a0a0a;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 5px;
+
+}
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .dropdown-content a {
+    color: rgb(25, 22, 22);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #ffefef;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.title-men{
+    color:rgb(42, 42, 111);
+    font-family: 'Raleway', serif;
+    font-size: 40px;  /* Mărimea fontului */
+    font-weight: 350;  /* Greutatea fontului */
+}
+
+/* Stilizare pentru secțiunea Bestseller */
+.bestseller {
+    margin: 20px;
+}
+
+.product {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.product-image img {
+    width: 250px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-info .price {
+    font-size: 20px;
+    color: #d35400;
+    margin-bottom: 15px;
+}
+
+.product-info .description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.carousel-container {
+    display: flex;
+    position: relative; /* Asigurăm poziționarea relativă */
+    width: 100%;
+}
+
+.carousel-item {
+    position: absolute; /* Suprapunem toate elementele */
+    top: 0;
+    left: 0;
+    width: 100%; /* Fiecare element ocupă întregul container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1; /* Elementul activ este vizibil */
+    z-index: 1; /* Aducem elementul activ în față */
+}
+
+.carousel-item img {
+    width: 33%;
+    height: auto;
+}
+
+.description {
+    width: 50%;
+    padding: 20px;
+    font-size: 1rem;
+    color: #d15c90;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+}
+
+.description p {
+    margin: 0;
+    line-height: 1.5;
+}

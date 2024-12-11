@@ -1,0 +1,191 @@
+/* Stil pentru header */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.site-name h1 {
+    color: rgb(42, 42, 111);
+    font-size: 2rem;
+    margin: 0;
+    text-align: center; /* Centrează titlul */
+    width: 100%;
+}
+
+
+.navbar {
+    font-family: 'Raleway', serif; 
+    display: flex;
+    justify-content: center; /* Aliniaza elementele pe orizontala la mijloc */
+    align-items: center;     /* Aliniaza elementele pe verticala la mijloc */
+    background-color: #fff;  /* Setează fundalul alb pentru bara de navigare */
+    padding: 0;         /* Adaugă puțin spațiu la sus și jos */
+}
+
+.navbar ul {
+    display: flex;           /* Aranjează linkurile pe orizontală */
+    list-style: none;        /* Elimină punctele din lista de linkuri */
+    padding: 0;              /* Elimină paddingul implicit */
+}
+
+.navbar li {
+    margin: 0 35px;          /* Adaugă spațiu între elementele din meniu */
+}
+
+.navbar a {
+    text-decoration: none;   /* Elimină sublinierea linkurilor */
+    color: #333;             /* Setează culoarea textului */
+    font-size: 17px;         /* Setează dimensiunea fontului */
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.navbar .dropdown-content {
+    display: none;
+    position: center;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Poza nota.jpg */
+.section-image {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+
+
+.notes-section h2 {
+    margin-right: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+/* Stilul pentru cardurile de note */
+.notes-section {
+    margin-top:20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 100px; /* Margini stânga și dreapta 100px */
+}
+
+.note-card {
+    width: calc(25% - 30px); /* 4 imagini pe linie */
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.note-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.note-card .note-info {
+    margin-top: 10px;
+}
+
+.note-card a {
+    color: rgb(42, 42, 111);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+/* Titlu central deasupra navbar-ului */
+.page-title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.page-title h1 {
+    font-family: 'Raleway', serif; 
+    font-size: 20px;
+    color: rgb(42, 42, 111);
+    margin-left:620px;
+}
+
+/* Buton de Înapoi */
+.back-button {
+    text-align: left;
+    margin: 20px;
+}
+
+.back-button a {
+    background-color: rgb(42, 42, 111);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.back-button a:hover {
+    background-color: rgb(60, 60, 150);
+}
+
+/* Imagine centrală */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 70%; /* Ajustează dimensiunea imaginii după preferință */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajutor | Perfume Paradise</title>
+    <link rel="stylesheet" href="Ajutor.css">
+</head>
+<body>
+    <!-- Bara de navigare -->
+    <header class="header">
+        <div class="site-name">
+            <h1>Perfume Paradise</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Acasă</a></li>        
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Parfumuri</a>
+                <div class="dropdown-content">
+                    <a href="men.html">Parfumuri Bărbați</a>
+                    <a href="women.html">Parfumuri Femei</a>
+                </div>
+            <li><a href="bestseller.html">Best Sellers</a></li>
+            <li><a href="note.html">Note</a></li>
+            <li><a href="ajutor.html">Ajutor</a></li>
+        </ul>
+    </nav>
+
+    <!-- Secțiune Ajutor -->
+    <section class="ajutor">
+        <h2>Salut! Cum te putem ajuta?</h2>
+        <p>Contactează-ne aici și spune-ne problema ta:</p>
+
+        <!-- Formular Ajutor -->
+        <form id="ajutor-form" action="submit_form.php" method="post">
+            <!-- Dropdown pentru selectarea problemei -->
+            <label for="problema">Selectează tipul problemei:</label>
+            <select id="problema" name="problema" required>
+                <option value="" disabled selected>Alege un tip de problemă</option>
+                <option value="nu_ma_pot_conecta">Nu mă pot conecta în cont</option>
+                <option value="nu_pot_plati">Nu pot plăti</option>
+                <option value="probleme_comanda">Probleme cu comanda</option>
+                <option value="retur">Retur</option>
+            </select>
+
+            <!-- Secțiune descrierea problemei -->
+            <label for="descriere">Descrierea problemei tale:</label>
+            <textarea id="descriere" name="descriere" rows="4" placeholder="Explică problema ta detaliat" required></textarea>
+
+            <!-- Adresa de email -->
+            <label for="email">Adresa ta de email:</label>
+            <input type="email" id="email" name="email" placeholder="exemplu@email.com" required>
+
+            <!-- Butonul de trimis -->
+            <button type="submit">Trimite</button>
+        </form>
+    </section>
+
+</body>
+</html>
