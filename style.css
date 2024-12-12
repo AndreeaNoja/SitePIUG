@@ -417,76 +417,126 @@ body.dark-mode .hero {
     background-color: #c03976;
 }
 
-/* Stiluri pentru varianta mobilă */
+/* Ascunde meniul de mobil pe desktop */
+.mobile-navbar {
+    display: none;
+}
+
+/* Ascunde meniul desktop pe mobil */
+.desktop-navbar {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Stiluri pentru tema întunecată doar pe mobil */
 @media (max-width: 768px) {
-    /* Ascundem navbar-ul pentru desktop */
-    .navbar ul {
+    .menu-toggle {
+        display: block;
+    }
+    .mobile-navbar {
+        display: block;
+    }
+
+    .desktop-navbar {
         display: none;
     }
 
-    /* Adăugăm stiluri pentru meniul hamburger */
-    .menu-toggle {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        margin-right: 20px;
+    body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
     }
 
-    /* Apare meniul vertical pe mobil la apăsarea iconiței */
-    .navbar.active ul {
-        display: block;
-        text-align: left;
-        position: absolute;
-        top: 60px; /* Poziția verticală a meniului */
-        right: 0;
-        background-color: #ffffff;
-        width: 200px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        padding: 10px;
+    body.dark-mode .header {
+        background-color: #121212;
+        color: #fbaec4;
+    }
+
+    body.dark-mode .navbar {
+        background-color: transparent;
+        color: #ffffff;
+    }
+
+    body.dark-mode .navbar ul li a {
+        color: #ffffff;
+    }
+
+    body.dark-mode .navbar ul li a:hover {
+        color: #fbaec4;
+    }
+
+    body.dark-mode .hero-image {
+        border: 1px solid #333;
+    }
+
+    body.dark-mode video {
+        border: 1px solid #333;
+    }
+
+    body.dark-mode .contact-section {
+        background-color: #222;
+        color: #ffffff;
+    }
+
+    body.dark-mode .contact-section input,
+    body.dark-mode .contact-section textarea {
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #a88282;
+    }
+
+    body.dark-mode .contact-section h2 {
+        color: #fbaec4;
+    }
+
+    body.dark-mode .contact-section label {
+        color: #fbaec4;
+    }
+
+    body.dark-mode .contact-section button {
+        background-color: #fbaec4;
+        color: #ffffff;
+    }
+
+    body.dark-mode .contact-section button:hover {
+        background-color: #c03976;
+    }
+
+    body.dark-mode .social-media hr {
+        border-color: #444;
+    }
+
+    body.dark-mode .social-icons a {
+        color: #fbaec4;
+    }
+
+    body.dark-mode .social-icons a:hover {
+        color: #ffffff;
+    }
+
+    /* Fix pentru partea dreaptă albă */
+    body.dark-mode .hero {
+        background-color: #121212;
+    }
+
+    /* Stiluri pentru buton */
+    #theme-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        font-size: 16px;
+        background-color: #fbaec4;
+        color: #ffffff;
+        border: none;
         border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
     }
 
-    /* Poziționarea produselor câte 2 pe linie pe mobil */
-    .product-grid {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .product-card {
-        width: 48%;  /* 2 produse pe linie */
-        margin-bottom: 15px;
-    }
-
-    /* Pentru paginile note */
-    .note-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .note-card {
-        width: 48%;  /* 2 imagini pe linie */
-        margin-bottom: 15px;
-    }
-
-    /* Eliminăm marginea din stânga și dreapta pentru note */
-    .notes-section {
-        padding: 0 0;
-        margin: 0;
-    }
-
-    /* Îmbunătățirea stilului pentru secțiunea de căutare */
-    .search-bar input {
-        width: 100%;
-    }
-
-    /* Reducem padding-ul și marginile header-ului pentru mobil */
-    .header {
-        padding: 20px;
-        margin-left: 0;
-    }
-
-    .site-name h1 {
-        font-size: 30px; /* Ajustăm dimensiunea fontului pentru mobil */
+    #theme-toggle:hover {
+        background-color: #c03976;
     }
 }
