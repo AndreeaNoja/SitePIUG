@@ -19,6 +19,19 @@
         </div>
     </header>
 
+     <!-- Meniul Hamburger pentru mobil -->
+         <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+
+         <!-- Navbarul -->
+                <div class="navbar">
+                    <ul>
+                        <li><a href="index.html">Acasă</a></li>
+                        <li><a href="women.html">Parfumuri Femei</a></li>
+                        <li><a href="men.html">Parfumuri Bărbați</a></li>
+                        <li><a href="notes.html">Note</a></li>
+                        <li><a href="help.html">Ajutor</a></li>
+                    </ul>
+                </div>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Acasă</a></li>        
@@ -147,6 +160,10 @@ searchInput.addEventListener('keydown', (event) => {
     }
 });
 
+function toggleMenu() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+    }
 
 </script>
             

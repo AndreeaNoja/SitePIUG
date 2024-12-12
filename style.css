@@ -416,3 +416,77 @@ body.dark-mode .hero {
 #theme-toggle:hover {
     background-color: #c03976;
 }
+
+/* Stiluri pentru varianta mobilă */
+@media (max-width: 768px) {
+    /* Ascundem navbar-ul pentru desktop */
+    .navbar ul {
+        display: none;
+    }
+
+    /* Adăugăm stiluri pentru meniul hamburger */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    /* Apare meniul vertical pe mobil la apăsarea iconiței */
+    .navbar.active ul {
+        display: block;
+        text-align: left;
+        position: absolute;
+        top: 60px; /* Poziția verticală a meniului */
+        right: 0;
+        background-color: #ffffff;
+        width: 200px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* Poziționarea produselor câte 2 pe linie pe mobil */
+    .product-grid {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product-card {
+        width: 48%;  /* 2 produse pe linie */
+        margin-bottom: 15px;
+    }
+
+    /* Pentru paginile note */
+    .note-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .note-card {
+        width: 48%;  /* 2 imagini pe linie */
+        margin-bottom: 15px;
+    }
+
+    /* Eliminăm marginea din stânga și dreapta pentru note */
+    .notes-section {
+        padding: 0 0;
+        margin: 0;
+    }
+
+    /* Îmbunătățirea stilului pentru secțiunea de căutare */
+    .search-bar input {
+        width: 100%;
+    }
+
+    /* Reducem padding-ul și marginile header-ului pentru mobil */
+    .header {
+        padding: 20px;
+        margin-left: 0;
+    }
+
+    .site-name h1 {
+        font-size: 30px; /* Ajustăm dimensiunea fontului pentru mobil */
+    }
+}
