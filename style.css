@@ -427,20 +427,92 @@ body.dark-mode .hero {
     display: block;
 }
 
+
+/* Mărirea celor 3 linii */
 .menu-toggle {
+    font-size: 40px; /* Poți ajusta această valoare pentru a-l face mai mare */
+    color: #333;
     display: none;
+    cursor: pointer;
+    padding: 10px;
 }
 
+/* Meniul de căutare să fie vizibil doar când este activat */
+.navbar.mobile-navbar {
+    display: none; /* Ascunde meniul de căutare pe mobil */
+}
+
+.navbar.active {
+    display: block; /* Afișează meniul atunci când este activ */
+}
+
+
+
+/* Asigură-te că imaginea ocupă întregul ecran pe mobil */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asigură că imaginea rămâne proporționată */
+}
+
+/* Ajustări pentru meniul de pe mobil */
+.navbar.mobile-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Așează linkurile unul sub altul */
+}
+
+.navbar.mobile-navbar ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar.mobile-navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+}
+
+/* Meniu de căutare pe mobil */
+.search-bar {
+    display: none;
+}
 /* Stiluri pentru tema întunecată doar pe mobil */
 @media (max-width: 768px) {
+    /* Aspectul pentru varianta mobilă */
+    header .site-name h1 {
+        font-size: 20px;
+    }
+
+    .hero-image {
+        object-fit: cover;
+    }
+
+    /* Alinierea meniului hamburger pe mobil */
+    .menu-toggle {
+        font-size: 40px;
+        display: block;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    /* Meniul de pe mobil */
+    .navbar.mobile-navbar.active {
+        display: block;
+    }
+
+    .navbar.desktop-navbar {
+        display: none;
+    }
     .menu-toggle {
         display: block;
     }
     .mobile-navbar {
         display: block;
     }
-
-    
 
     .desktop-navbar {
         display: none;
