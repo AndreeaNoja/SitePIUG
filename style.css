@@ -493,14 +493,14 @@ body.dark-mode .hero {
 
     .hero-image {
         width: 100%;
-        height: 70vh; /* Ajustează înălțimea pentru a face imaginea mai mare pe mobil */
+        height: 100vh; /* Ajustează înălțimea pentru a face imaginea mai mare pe mobil */
         object-fit: cover;
     }
 
     /* Ajustează și video-ul pe mobil */
     .hero video {
         width: 100%;
-        height: 70vh;
+        height: 100vh;
         object-fit: cover;
     }
 
@@ -512,6 +512,7 @@ body.dark-mode .hero {
         margin-top: 10px;
     }
 
+    
     .mobile-navbar {
         position: fixed;
         top: 0;
@@ -666,4 +667,14 @@ body.dark-mode .hero {
     #theme-toggle:hover {
         background-color: #c03976;
     }
+    .desktop-navbar {
+        display: none; /* Ascunde bara de navigare pentru desktop */
+    }
+    
+    .mobile-navbar {
+        display: block; /* Afișează meniul mobil */
+    }
+}
+.mobile-navbar.active {
+    display: block; /* Meniul mobil va apărea când este activ */
 }
