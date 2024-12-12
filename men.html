@@ -165,5 +165,15 @@ function toggleMenu() {
         const navbar = document.querySelector('.navbar');
         navbar.classList.toggle('active');
     }
+    // Selectăm butonul cu cele 3 linii și meniul lateral
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNavbar = document.querySelector('.mobile-navbar');
+
+    // Adăugăm un eveniment de click pentru a activa/dezactiva meniul
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mobileNavbar.classList.toggle('active');
+    });
+
 </script>
             
