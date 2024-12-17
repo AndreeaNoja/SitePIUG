@@ -484,197 +484,58 @@ body.dark-mode .hero {
 .search-bar {
     display: none;
 }
-/* Stiluri pentru tema întunecată doar pe mobil */
-@media (max-width: 768px) {
-    /* Aspectul pentru varianta mobilă */
-    header .site-name h1 {
-        font-size: 20px;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 100vh; /* Ajustează înălțimea pentru a face imaginea mai mare pe mobil */
-        object-fit: cover;
-    }
-
-    /* Ajustează și video-ul pe mobil */
-    .hero video {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    /* Alinierea meniului hamburger pe mobil */
-    .menu-toggle {
-        font-size: 40px;
-        display: block;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    
-    .mobile-navbar {
-        position: fixed;
-        top: 0;
-        left: -250px; /* Meniu ascuns la început */
-        width: 250px;
-        height: 100%;
-        background-color: #ffffff;
-        transition: left 0.3s ease;
-        z-index: 1000;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-        padding-top: 60px;
-    }
-    
-    .mobile-navbar ul {
-        list-style-type: none;
+/* Resetare stiluri mobile pentru a arăta ca desktop */
+@media (max-width: 300px) {
+    * {
+        margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
-    
-    .mobile-navbar ul li {
-        padding: 15px;
-        text-align: center;
+
+    body {
+        font-size: 100%; /* Asigură dimensiuni proporționale */
     }
-    
-    .mobile-navbar ul li a {
-        color: rgb(25, 22, 22);
-        text-decoration: none;
-        font-size: 18px;
+
+    .header {
+        padding: 50px;
+        margin-left: 520px;
     }
-    
-    .mobile-navbar ul li a:hover {
-        color: #0a0a0a;
+
+    .site-name h1 {
+        font-size: 40px;
     }
+
+    .navbar {
+        padding: 5px; /* Spațiere mai mică */
+        justify-content: space-between; /* Ajustare spațiere */
+      }
     
-    /* Stiluri pentru butonul cu cele 3 linii */
-    .menu-toggle {
-        font-size: 30px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        width: 35px;
-    }
-    
-    /* Stiluri pentru a deschide meniul lateral */
-    .menu-toggle.active + .mobile-navbar {
-        left: 0; /* Meniu vizibil când este activ */
-    }
-    
-    /* Stiluri pentru bara de căutare */
-    .search-bar {
-        display: none;
-    }
-    
-    /* Stiluri pentru imaginea de pe pagina index */
+      .navbar a {
+        font-size: 14px; /* Text mai mic pe ecrane mici */
+      }
     .hero-image {
         width: 100%;
         height: auto;
         object-fit: cover;
+        }
+
+    .menu-toggle {
+        display: none; /* Ascundem meniul mobil */
     }
 
-    body.dark-mode {
-        background-color: #121212;
-        color: #ffffff;
-    }
-
-    body.dark-mode .header {
-        background-color: #121212;
-        color: #fbaec4;
-    }
-
-    body.dark-mode .navbar {
-        background-color: transparent;
-        color: #ffffff;
-    }
-
-    body.dark-mode .navbar ul li a {
-        color: #ffffff;
-    }
-
-    body.dark-mode .navbar ul li a:hover {
-        color: #fbaec4;
-    }
-
-    body.dark-mode .hero-image {
-        border: 1px solid #333;
-    }
-
-    body.dark-mode video {
-        border: 1px solid #333;
-    }
-
-    body.dark-mode .contact-section {
-        background-color: #222;
-        color: #ffffff;
-    }
-
-    body.dark-mode .contact-section input,
-    body.dark-mode .contact-section textarea {
-        background-color: #333;
-        color: #fff;
-        border: 1px solid #a88282;
-    }
-
-    body.dark-mode .contact-section h2 {
-        color: #fbaec4;
-    }
-
-    body.dark-mode .contact-section label {
-        color: #fbaec4;
-    }
-
-    body.dark-mode .contact-section button {
-        background-color: #fbaec4;
-        color: #ffffff;
-    }
-
-    body.dark-mode .contact-section button:hover {
-        background-color: #c03976;
-    }
-
-    body.dark-mode .social-media hr {
-        border-color: #444;
-    }
-
-    body.dark-mode .social-icons a {
-        color: #fbaec4;
-    }
-
-    body.dark-mode .social-icons a:hover {
-        color: #ffffff;
-    }
-
-    /* Fix pentru partea dreaptă albă */
-    body.dark-mode .hero {
-        background-color: #121212;
-    }
-
-    /* Stiluri pentru buton */
-    #theme-toggle {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        padding: 10px 15px;
-        font-size: 16px;
-        background-color: #fbaec4;
-        color: #ffffff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    #theme-toggle:hover {
-        background-color: #c03976;
-    }
-    .desktop-navbar {
-        display: none; /* Ascunde bara de navigare pentru desktop */
-    }
-    
     .mobile-navbar {
-        display: block; /* Afișează meniul mobil */
+        display: none !important; /* Forțăm ascunderea meniului mobil */
     }
-}
-.mobile-navbar.active {
-    display: block; /* Meniul mobil va apărea când este activ */
+
+    .desktop-navbar {
+        display: block !important; /* Forțăm afișarea meniului desktop */
+    }
+
+    .products {
+        padding: 0 100px;
+    }
+
+    .contact-section {
+        padding: 40px 20px;
+    }
 }
